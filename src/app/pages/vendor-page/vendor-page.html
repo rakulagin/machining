@@ -1,0 +1,16 @@
+<div>
+  <div class="brand-logo__wrp">
+    <img
+      class="brand-logo"
+      [src]="'/assets/img/brands/' + brand?.imgUrl"
+      [alt]="brand?.name"
+    />
+  </div>
+  <app-vendor-name-list></app-vendor-name-list>
+</div>
+
+<div class="brand__card">
+  <h1>{{ brand?.name }}</h1>
+
+  <p class="brand-description">{{ brand?.desc }}</p>
+</div>
