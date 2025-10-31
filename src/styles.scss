@@ -112,3 +112,15 @@ h1 {
   color: var(--primary-color);
   border: 2px solid var(--primary-color);
 }
+
+@media (max-width: 1450px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 95%;
+  }
+}
