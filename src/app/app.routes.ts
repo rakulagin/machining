@@ -9,10 +9,11 @@ export const routes: Routes = [
     path: '',
     component: Layout,
     children: [
-      { path: '', component: MainPage, title: 'Главная' },
+      { path: 'main', component: MainPage, title: 'Главная' },
       { path: 'about', component: AboutPage, title: 'О нас' },
       { path: 'contacts', component: ContactsPage, title: 'Контакты' },
-      { path: 'catalogs/:id', component: BrandPage },
+      { path: 'main/:id', component: BrandPage },
+      { path: '', redirectTo: 'main', pathMatch: 'full' },
     ],
   },
 ];

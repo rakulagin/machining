@@ -29,7 +29,6 @@ export class BrandPage implements OnInit {
       )
       .subscribe({
         next: (brand) => {
-          console.log('brand', brand);
           this.brand = brand;
         },
         error: (error) => {

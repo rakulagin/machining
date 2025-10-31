@@ -23,13 +23,28 @@
     <div class="container">
       <ul class="nav__list">
         <li>
-          <a class="nav__link" routerLink="/">Главная</a>
+          <a
+            class="nav__link"
+            routerLink="/main"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Главная</a
+          >
+        </li>
+        <li class="catalogs-link">
+          <a class="nav__link" routerLink="/main/1" routerLinkActive="active"
+            >Каталоги</a
+          >
         </li>
         <li>
-          <a class="nav__link" routerLink="/about">О нас</a>
+          <a class="nav__link" routerLink="/about" routerLinkActive="active"
+            >О нас</a
+          >
         </li>
         <li>
-          <a class="nav__link" routerLink="/contacts">Контакты</a>
+          <a class="nav__link" routerLink="/contacts" routerLinkActive="active"
+            >Контакты</a
+          >
         </li>
       </ul>
     </div>

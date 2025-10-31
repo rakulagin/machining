@@ -22,7 +22,6 @@ export class BrandNameList {
   ngOnInit(): void {
     this.brandsService.getBrands().subscribe({
       next: (brands: IBrand[]) => {
-        console.log('brands = ', brands);
         this.brands = brands;
       },
       error: (err) => {
