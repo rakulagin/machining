@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { VendorCard } from '../vendor-card/vendor-card';
+import { BrandCard } from '../brand-card/brand-card';
 import { BrandsService } from '../../services/brands.service';
 import { IBrand } from '../../app.model';
 
 @Component({
-  selector: 'app-vendor-card-list',
-  imports: [VendorCard],
-  templateUrl: './vendor-card-list.html',
-  styleUrl: './vendor-card-list.scss',
+  selector: 'app-brand-card-list',
+  imports: [BrandCard],
+  templateUrl: './brand-card-list.html',
+  styleUrl: './brand-card-list.scss',
 })
-export class VendorCardList implements OnInit {
+export class BrandCardList implements OnInit {
   brands: IBrand[] = [];
   constructor(private brandsService: BrandsService) {}
 

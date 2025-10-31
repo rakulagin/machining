@@ -10,12 +10,12 @@ import { IBrand } from '../../app.model';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-vendor-name-list',
+  selector: 'app-brand-name-list',
   imports: [RouterLink],
-  templateUrl: './vendor-name-list.html',
-  styleUrl: './vendor-name-list.scss',
+  templateUrl: './brand-name-list.html',
+  styleUrl: './brand-name-list.scss',
 })
-export class VendorNameList {
+export class BrandNameList {
   brands: IBrand[] = [];
   constructor(private brandsService: BrandsService) {}
 

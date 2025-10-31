@@ -3,15 +3,15 @@ import { ActivatedRoute } from '@angular/router';
 import { switchMap } from 'rxjs';
 import { BrandsService } from '../../services/brands.service';
 import { IBrand } from '../../app.model';
-import { VendorNameList } from '../../components/vendor-name-list/vendor-name-list';
+import { BrandNameList } from '../../components/brand-name-list/brand-name-list';
 
 @Component({
-  selector: 'app-vendor-page',
-  imports: [VendorNameList],
-  templateUrl: './vendor-page.html',
-  styleUrl: './vendor-page.scss',
+  selector: 'app-brand-page',
+  imports: [BrandNameList],
+  templateUrl: './brand-page.html',
+  styleUrl: './brand-page.scss',
 })
-export class VendorPage implements OnInit {
+export class BrandPage implements OnInit {
   brand?: IBrand;
 
   constructor(

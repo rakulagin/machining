@@ -3,11 +3,11 @@ import { IBrand } from '../../app.model';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-vendor-card',
+  selector: 'app-brand-card',
   imports: [RouterLink],
-  templateUrl: './vendor-card.html',
-  styleUrl: './vendor-card.scss',
+  templateUrl: './brand-card.html',
+  styleUrl: './brand-card.scss',
 })
-export class VendorCard {
+export class BrandCard {
   @Input() brand!: IBrand;
 }

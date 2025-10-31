@@ -1,0 +1,44 @@
+:host {
+  background-color: var(--white-color);
+  border: 2px solid var(--gray-border-color);
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+  cursor: pointer;
+}
+
+// .card {
+//   display: grid;
+//   grid-template-columns: 1fr 250px;
+//   height: 100%;
+// }
+
+// .content {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+// }
+
+// h4 {
+//   color: var(--primary-color);
+//   font-size: 24px;
+//   margin-bottom: 8px;
+// }
+
+// .photo {
+//   display: flex;
+//   justify-content: end;
+//   align-items: baseline;
+
+img {
+  max-width: 200px;
+}
+// }
+
+// .link {
+//   cursor: pointer;
+//   color: var(--black-text-color);
+// }

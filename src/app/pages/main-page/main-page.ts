@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { VendorCardList } from '../../components/vendor-card-list/vendor-card-list';
+import { BrandCardList } from '../../components/brand-card-list/brand-card-list';
 
 @Component({
   selector: 'app-main-page',
-  imports: [VendorCardList],
+  imports: [BrandCardList],
   templateUrl: './main-page.html',
   styleUrl: './main-page.scss',
 })
