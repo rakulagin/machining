@@ -64,6 +64,11 @@ a {
   font-weight: 600;
 }
 
+.contacts-mobile {
+  display: none;
+  text-align: end;
+}
+
 .email {
   font-weight: 700;
   font-size: 24px;
@@ -72,5 +77,19 @@ a {
 @media (max-width: 1200px) {
   .slogan {
     display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .contacts {
+    display: none;
+  }
+
+  .contacts-mobile {
+    display: block;
+  }
+
+  .header {
+    padding-bottom: 0;
   }
 }
