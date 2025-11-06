@@ -56,7 +56,11 @@
     <div class="nav__mobile">
       <div class="container">
         <div class="nav__mobile-wrp">
-          <div class="menu">123</div>
+          <div class="menu">
+            <button mat-mini-fab class="menu-button" (click)="menuClick.emit()">
+              <mat-icon>menu</mat-icon>
+            </button>
+          </div>
           <div class="contacts-mobile">
             <p>+7(917)111-22-33</p>
             <p class="email">machining&#64;gmail.com</p>

@@ -7,3 +7,30 @@
 .content {
   flex: 1;
 }
+
+.sidenav-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 24px;
+}
+
+.nav__link {
+  color: var(--black-text-color);
+  display: block;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.nav__link.active {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}

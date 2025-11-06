@@ -1,5 +1,48 @@
-<app-header></app-header>
-<div class="container content">
-  <router-outlet></router-outlet>
-</div>
-<app-footer></app-footer>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav mode="over">
+    <ul class="nav__list">
+      <li>
+        <a
+          class="nav__link"
+          routerLink="/main"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="sidenav.close()"
+          >Главная</a
+        >
+      </li>
+      <li class="catalogs-link">
+        <a
+          class="nav__link"
+          routerLink="/main/1"
+          routerLinkActive="active"
+          (click)="sidenav.close()"
+          >Каталоги</a
+        >
+      </li>
+      <li>
+        <a
+          class="nav__link"
+          routerLink="/about"
+          routerLinkActive="active"
+          (click)="sidenav.close()"
+          >О нас</a
+        >
+      </li>
+      <li>
+        <a
+          class="nav__link"
+          routerLink="/contacts"
+          routerLinkActive="active"
+          (click)="sidenav.close()"
+          >Контакты</a
+        >
+      </li>
+    </ul>
+  </mat-sidenav>
+  <app-header (menuClick)="sidenav.toggle()"></app-header>
+  <div class="container content">
+    <router-outlet></router-outlet>
+  </div>
+  <app-footer></app-footer>
+</mat-sidenav-container>
