@@ -1,5 +1,9 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #sidenav mode="over">
+  <mat-sidenav
+    #sidenav
+    mode="over"
+    (closedStart)="accordionItem.expanded = false"
+  >
     <ul class="nav__list">
       <li>
         <a
@@ -11,15 +15,41 @@
           >Главная</a
         >
       </li>
-      <li class="catalogs-link">
-        <a
-          class="nav__link"
-          routerLink="/main/1"
-          routerLinkActive="active"
-          (click)="sidenav.close()"
-          >Каталоги</a
-        >
+
+      <li>
+        <cdk-accordion class="accordion">
+          <cdk-accordion-item
+            #accordionItem="cdkAccordionItem"
+            class="accordion-item"
+          >
+            <a
+              class="nav__link"
+              [class.active]="isCatalogsActive()"
+              [class.expanded]="accordionItem.expanded"
+              (click)="accordionItem.toggle()"
+              id="accordion-header"
+              [attr.aria-expanded]="accordionItem.expanded"
+              aria-controls="accordion-body"
+            >
+              Каталоги
+            </a>
+            @if(accordionItem.expanded) {
+            <div
+              class="accordion-item-body"
+              role="region"
+              [style.display]="accordionItem.expanded ? '' : 'none'"
+              id="accordion-body"
+              aria-labelledby="accordion-header"
+            >
+              <app-brand-name-list
+                (itemClick)="sidenav.close()"
+              ></app-brand-name-list>
+            </div>
+            }
+          </cdk-accordion-item>
+        </cdk-accordion>
       </li>
+
       <li>
         <a
           class="nav__link"
@@ -40,9 +70,12 @@
       </li>
     </ul>
   </mat-sidenav>
-  <app-header (menuClick)="sidenav.toggle()"></app-header>
-  <div class="container content">
-    <router-outlet></router-outlet>
-  </div>
-  <app-footer></app-footer>
+
+  <mat-sidenav-content class="main-content">
+    <app-header (menuClick)="sidenav.toggle()"></app-header>
+    <div class="container content">
+      <router-outlet></router-outlet>
+    </div>
+    <app-footer></app-footer>
+  </mat-sidenav-content>
 </mat-sidenav-container>

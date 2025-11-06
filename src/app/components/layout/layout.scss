@@ -1,19 +1,20 @@
 :host {
+  display: block;
+  height: 100vh;
+}
+
+.sidenav-container {
+  height: 100%;
+}
+
+.main-content {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 .content {
   flex: 1;
-}
-
-.sidenav-container {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 
 .nav__list {
@@ -28,9 +29,22 @@
   display: block;
   padding: 8px;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .nav__link.active {
   background-color: var(--primary-color);
   color: var(--white-color);
+}
+
+.expanded {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+app-brand-name-list {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding: 12px;
+  line-height: 1;
 }

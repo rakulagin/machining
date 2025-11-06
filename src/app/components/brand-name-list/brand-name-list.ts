@@ -2,7 +2,9 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
+  EventEmitter,
   OnInit,
+  Output,
   ViewChild,
 } from '@angular/core';
 import { BrandsService } from '../../services/brands.service';
@@ -28,5 +30,11 @@ export class BrandNameList {
         console.log('brands = ', err);
       },
     });
+  }
+
+  @Output() itemClick = new EventEmitter<void>();
+
+  onBrandClick() {
+    this.itemClick.emit();
   }
 }
