@@ -18,39 +18,51 @@
         <button class="btn btn-outlined">Перезвоните мне!</button>
       </div>
     </div>
-    <div class="contacts-mobile">
-      <p>+7(917)111-22-33</p>
-      <p class="email">machining&#64;gmail.com</p>
-    </div>
   </div>
   <div class="nav">
-    <div class="container">
-      <ul class="nav__list">
-        <li>
-          <a
-            class="nav__link"
-            routerLink="/main"
-            routerLinkActive="active"
-            [routerLinkActiveOptions]="{ exact: true }"
-            >Главная</a
-          >
-        </li>
-        <li class="catalogs-link">
-          <a class="nav__link" routerLink="/main/1" routerLinkActive="active"
-            >Каталоги</a
-          >
-        </li>
-        <li>
-          <a class="nav__link" routerLink="/about" routerLinkActive="active"
-            >О нас</a
-          >
-        </li>
-        <li>
-          <a class="nav__link" routerLink="/contacts" routerLinkActive="active"
-            >Контакты</a
-          >
-        </li>
-      </ul>
+    <div class="nav__desktop">
+      <div class="container">
+        <ul class="nav__list">
+          <li>
+            <a
+              class="nav__link"
+              routerLink="/main"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Главная</a
+            >
+          </li>
+          <li class="catalogs-link">
+            <a class="nav__link" routerLink="/main/1" routerLinkActive="active"
+              >Каталоги</a
+            >
+          </li>
+          <li>
+            <a class="nav__link" routerLink="/about" routerLinkActive="active"
+              >О нас</a
+            >
+          </li>
+          <li>
+            <a
+              class="nav__link"
+              routerLink="/contacts"
+              routerLinkActive="active"
+              >Контакты</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="nav__mobile">
+      <div class="container">
+        <div class="nav__mobile-wrp">
+          <div class="menu">123</div>
+          <div class="contacts-mobile">
+            <p>+7(917)111-22-33</p>
+            <p class="email">machining&#64;gmail.com</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

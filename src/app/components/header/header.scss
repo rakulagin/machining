@@ -37,6 +37,25 @@ a {
   color: var(--white-color);
 }
 
+.nav__mobile {
+  display: none;
+}
+
+.nav__mobile-wrp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.contacts-mobile {
+  text-align: end;
+}
+
+.menu {
+  width: 50px;
+}
+
 .nav__list {
   display: flex;
   justify-content: space-between;
@@ -64,11 +83,6 @@ a {
   font-weight: 600;
 }
 
-.contacts-mobile {
-  display: none;
-  text-align: end;
-}
-
 .email {
   font-weight: 700;
   font-size: 24px;
@@ -85,11 +99,15 @@ a {
     display: none;
   }
 
-  .contacts-mobile {
-    display: block;
-  }
-
   .header {
     padding-bottom: 0;
+  }
+
+  .nav__desktop {
+    display: none;
+  }
+
+  .nav__mobile {
+    display: block;
   }
 }
