@@ -170,3 +170,17 @@ a {
     display: block;
   }
 }
+
+@media (max-width: 528px) {
+  .logo-wrp {
+    margin-bottom: 0;
+  }
+
+  .company-name-wrp {
+    top: -14px;
+  }
+
+  .trademark {
+    top: -3px;
+  }
+}
