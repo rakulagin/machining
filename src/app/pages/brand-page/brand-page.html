@@ -12,5 +12,20 @@
 <div class="brand__card">
   <h1>{{ brand?.name }}</h1>
 
+  @if (brand?.links) {
+  <h3>Каталоги</h3>
+  <ul class="catalog">
+    @for(link of brand?.links; track link.url) {
+    <li class="catalog__list">
+      <p>
+        <a class="catalog__link" [href]="link.url" target="_blank">{{
+          link.title
+        }}</a>
+      </p>
+    </li>
+    }
+  </ul>
+  }
+
   <p class="brand-description">{{ brand?.desc }}</p>
 </div>

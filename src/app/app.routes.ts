@@ -4,15 +4,23 @@ import { Layout } from './components/layout/layout';
 import { AboutPage } from './pages/about-page/about-page';
 import { ContactsPage } from './pages/contacts-page/contacts-page';
 import { BrandPage } from './pages/brand-page/brand-page';
+
 export const routes: Routes = [
   {
     path: '',
     component: Layout,
     children: [
       { path: 'main', component: MainPage, title: 'Главная' },
+
+      {
+        path: 'catalog',
+        children: [
+          { path: '', redirectTo: '1', pathMatch: 'full' },
+          { path: ':id', component: BrandPage, title: 'Каталог' },
+        ],
+      },
+
       { path: 'about', component: AboutPage, title: 'О нас' },
-      { path: 'contacts', component: ContactsPage, title: 'Контакты' },
-      { path: 'main/:id', component: BrandPage },
       { path: '', redirectTo: 'main', pathMatch: 'full' },
     ],
   },

@@ -9,11 +9,11 @@ import {
 } from '@angular/core';
 import { BrandsService } from '../../services/brands.service';
 import { IBrand } from '../../app.model';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-brand-name-list',
-  imports: [RouterLink],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './brand-name-list.html',
   styleUrl: './brand-name-list.scss',
 })

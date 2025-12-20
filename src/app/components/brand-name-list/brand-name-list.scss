@@ -11,6 +11,12 @@
 }
 
 .link {
+  font-family: 'Barlow-semi-condensed';
+  font-weight: 500;
   cursor: pointer;
-  color: var(--black-text-color);
+  color: var(--semi-black-color);
+}
+
+.active {
+  color: var(--primary-color)
 }

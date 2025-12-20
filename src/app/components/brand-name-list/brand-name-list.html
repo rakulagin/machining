@@ -1,5 +1,10 @@
 @for (brand of brands; track brand.id) {
-<a class="link" [routerLink]="['/main', brand.id]" (click)="onBrandClick()">{{
-  brand.name
-}}</a>
+<a
+  class="link"
+  [routerLink]="['/catalog', brand.id]"
+  routerLinkActive="active"
+  [routerLinkActiveOptions]="{ exact: true }"
+  (click)="onBrandClick()"
+  >{{ brand.name }}</a
+>
 }

@@ -18,11 +18,29 @@
 }
 
 h1 {
+  font-family: 'Barlow-semi-condensed';
+  font-weight: 500;
   text-align: center;
 }
 
 .brand-description {
   white-space: pre-line;
+}
+
+h3 {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.catalog {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.catalog__link {
+  font-weight: 500;
 }
 
 @media (max-width:760px) {

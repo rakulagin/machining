@@ -21,23 +21,24 @@
           <cdk-accordion-item
             #accordionItem="cdkAccordionItem"
             class="accordion-item"
+            [expanded]="isCatalogsExpanded()"
           >
             <a
               class="nav__link"
               [class.active]="isCatalogsActive()"
-              [class.expanded]="accordionItem.expanded"
-              (click)="accordionItem.toggle()"
+              [class.expanded]="isCatalogsExpanded()"
+              (click)="toggleCatalogs()"
               id="accordion-header"
-              [attr.aria-expanded]="accordionItem.expanded"
+              [attr.aria-expanded]="isCatalogsExpanded()"
               aria-controls="accordion-body"
             >
               Каталоги
             </a>
-            @if(accordionItem.expanded) {
+
+            @if(isCatalogsExpanded()) {
             <div
               class="accordion-item-body"
               role="region"
-              [style.display]="accordionItem.expanded ? '' : 'none'"
               id="accordion-body"
               aria-labelledby="accordion-header"
             >
@@ -59,15 +60,6 @@
           >О нас</a
         >
       </li>
-      <!-- <li>
-        <a
-          class="nav__link"
-          routerLink="/contacts"
-          routerLinkActive="active"
-          (click)="sidenav.close()"
-          >Контакты</a
-        >
-      </li> -->
     </ul>
   </mat-sidenav>
 

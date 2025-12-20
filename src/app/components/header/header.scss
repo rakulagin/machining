@@ -14,12 +14,39 @@
 .logo-wrp {
   display: flex;
   gap: 16px;
+  position: relative;
 }
 
-.slogan {
+.trademark {
+  position: absolute;
+  left: 345px;
+  top: 20px;
+  font-size: 8px;
+}
+
+.company-name-wrp {
+  align-self: baseline;
+  position: relative;
+  top: 9px;
+}
+
+.company-name {
+  font-family: 'Barlow-semi-condensed';
+  font-weight: 600;
+  font-size: 54px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 8px;
+}
+
+.company-description {
+  font-size: 14px;
+}
+
+.g-letter {
+  font-family: 'Montserrat';
+  color: var(--primary-color);
 }
 
 .logo img {
@@ -58,7 +85,8 @@ a {
 
 .nav__list {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
+  gap: 40px;
 }
 
 .nav__link {
@@ -83,8 +111,15 @@ a {
   font-weight: 600;
 }
 
+.phone {
+  font-family: 'Barlow-semi-condensed';
+  color: var(--semi-black-color);
+}
+
 .email {
-  font-weight: 700;
+  font-family: 'Barlow-semi-condensed';
+  color: var(--semi-black-color);
+  font-weight: 500;
   font-size: 24px;
 }
 
@@ -102,15 +137,25 @@ a {
   }
 }
 
-@media (max-width: 1200px) {
-  .slogan {
-    display: none;
-  }
-}
+@media (max-width: 1200px) {}
 
 @media (max-width: 760px) {
+  .logo-wrp {
+    margin-bottom: 20px;
+  }
+
   .contacts {
     display: none;
+  }
+
+  .contacts-mobile {
+    .email {
+      color: var(--white-color)
+    }
+
+    .phone {
+      color: var(--white-color);
+    }
   }
 
   .header {

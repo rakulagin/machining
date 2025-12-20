@@ -4,6 +4,16 @@
 // Learn more about theming and how to use it for your application's
 // custom components at https://material.angular.dev/guide/theming
 @use '@angular/material' as mat;
+@use './fonts' as *;
+
+:root {
+  --primary-color: #005cbb;
+  --white-color: #ffffff;
+  --gray-bg-color: #f3f6fa;
+  --gray-border-color: #cccccc;
+  --black-text-color: #000000;
+  --semi-black-color: #555;
+}
 
 html {
   @include mat.theme((color: (primary: mat.$azure-palette,
@@ -31,68 +41,6 @@ body {
   margin: 0;
 }
 
-@font-face {
-  font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 300;
-  src: url("../public/assets/fonts/raleway-v36-cyrillic_latin-300.woff2") format("woff2");
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* raleway-regular - cyrillic_latin */
-@font-face {
-  font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../public/assets/fonts/raleway-v36-cyrillic_latin-regular.woff2") format("woff2");
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* raleway-500 - cyrillic_latin */
-@font-face {
-  font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 500;
-  src: url("../public/assets/fonts/raleway-v36-cyrillic_latin-500.woff2") format("woff2");
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* raleway-600 - cyrillic_latin */
-@font-face {
-  font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 600;
-  src: url("../public/assets/fonts/raleway-v36-cyrillic_latin-600.woff2") format("woff2");
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* raleway-700 - cyrillic_latin */
-@font-face {
-  font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../public/assets/fonts/raleway-v36-cyrillic_latin-700.woff2") format("woff2");
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-:root {
-  --primary-color: #005cbb;
-  --white-color: #ffffff;
-  --gray-bg-color: #f3f6fa;
-  --gray-border-color: #cccccc;
-  --black-text-color: #000000;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -103,7 +51,7 @@ html {
 }
 
 body {
-  background-color: var(--gray-bg-color);
+  // background-color: var(--gray-bg-color);
   height: 100%;
   line-height: 1;
 }
@@ -114,10 +62,16 @@ a,
 p {
   font-family: "Raleway", sans-serif;
   font-size: 22px;
+  color: var(--semi-black-color);
+}
+
+span {
+  color: var(--semi-black-color);
 }
 
 a {
   text-decoration: none;
+  color: var(--primary-color);
 }
 
 ul {
@@ -167,6 +121,12 @@ h1 {
 @media (max-width: 1024px) {
   .container {
     max-width: 95%;
+  }
+}
+
+@media(max-width: 760px) {
+  h1 {
+    font-size: 28px;
   }
 }
 
