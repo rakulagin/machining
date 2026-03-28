@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Component, EventEmitter, inject, Output } from '@angular/core';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
@@ -10,4 +10,10 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class Header {
   @Output() menuClick = new EventEmitter<void>();
+
+  private router = inject(Router);
+
+  goMain() {
+    this.router.navigate(['/main']);
+  }
 }

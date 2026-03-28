@@ -1,5 +1,7 @@
-<img
-  [src]="'assets/img/brands/' + brand.imgUrl"
-  [alt]="brand.name"
-  [routerLink]="['/catalog', brand.id]"
-/>
+<div class="brand-card__wrp" [routerLink]="['/catalog', brand.id]">
+  <img
+    [src]="'assets/img/brands/' + brand.imgUrl"
+    [alt]="brand.name"
+    
+  />
+</div>

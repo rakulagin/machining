@@ -1,0 +1,43 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="footer__logo" routerLink="/main" aria-label="Machining">
+          <img src="assets/img/machining-logo.png" alt="Логотип Machining" />
+          <div class="footer__brand-copy">
+            <span class="footer__title">
+              MACHININ
+              <span class="footer__title-accent">G</span>
+            </span>
+            <span class="footer__subtitle">
+              Оборудование и расходные материалы для металлообработки
+            </span>
+          </div>
+        </a>
+        <p class="footer__text">
+          Поставляем инструмент и решения для производств, где важны точность,
+          стабильность и скорость поставки.
+        </p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Навигация по сайту">
+        <h3>Разделы</h3>
+        <a routerLink="/main">Главная</a>
+        <a routerLink="/catalog">Каталоги</a>
+        <a routerLink="/about">О компании</a>
+      </nav>
+
+      <div class="footer__contacts">
+        <h3>Контакты</h3>
+        <a href="tel:+79276571682">+7 (927) 657-16-82</a>
+        <a href="mailto:machining@yandex.ru">machining@yandex.ru</a>
+        <p>Подберём инструмент и проконсультируем по вашему производству.</p>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© {{ currentYear }} MACHINING</span>
+      <span>Металлообработка, оснастка и поставка инструмента</span>
+    </div>
+  </div>
+</footer>
